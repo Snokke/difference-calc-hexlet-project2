@@ -11,5 +11,4 @@ npm install -g project2-snokke
 ```
 
 ## Asciinema 
-Step 1
-[![asciicast](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys.png)](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys?speed=4)
+Step 1 - [Asciinema](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys?speed=4)
