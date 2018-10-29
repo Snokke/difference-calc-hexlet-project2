@@ -9,9 +9,9 @@ import version from '../../package.json';
 import genDiff from '..';
 
 program
-  .version(version)
+  .version(`${version}`)
   .description('Compares two configuration files and shows a difference.')
   .arguments('<firstConfig> <secondConfig>')
-  .action((firstConfig, secondConfig) => console.log(genDiff(firstConfig, secondConfig)))
   .option('-f, --format [type]', 'Output format')
+  .action((firstConfig, secondConfig) => console.log(genDiff(firstConfig, secondConfig)))
   .parse(process.argv);
