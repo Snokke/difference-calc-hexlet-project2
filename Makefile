@@ -1,11 +1,15 @@
 install:
 	npm install
 
-start:
-	npm run babel-node -- src/bin/gendiff.js
+run:
+	npx babel-node -- 'src/bin/gendiff.js'
 
 publish:
 	npm publish
 
 lint:
-	npm run eslint "src/**/*.js"
+	npx eslint "src/**/*.js"
+
+build:
+	rm -rf dist
+	npm run build
