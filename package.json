@@ -1,11 +1,10 @@
 {
   "name": "project2-snokke",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
     "eslint": "eslint"
@@ -25,7 +24,8 @@
     "testPathIgnorePatterns": [
       "<rootDir>/.compiled/",
       "<rootDir>/node_modules/",
-      "<rootDir>/.history/"
+      "<rootDir>/.history/",
+      "<rootDir>/dist/"
     ]
   },
   "author": "Andrei Babintsev",
@@ -39,7 +39,6 @@
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
-    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "commander": "^2.19.0",
     "eslint": "^5.8.0",
@@ -48,6 +47,10 @@
     "lodash": "^4.17.11"
   },
   "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-jest": "^21.26.2",
+    "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "jest": "^23.6.0"
   }
 }
