@@ -1,10 +1,12 @@
 import yaml from 'js-yaml';
+import ini from 'ini';
 import path from 'path';
 import fs from 'fs';
 
 const mappingExtensions = {
   json: file => JSON.parse(file),
   yaml: file => yaml.safeLoad(file),
+  ini: file => ini.parse(file),
 };
 
 const parse = (pathToFile) => {

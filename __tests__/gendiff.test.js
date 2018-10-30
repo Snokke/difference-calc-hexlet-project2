@@ -18,4 +18,12 @@ describe('genDiff', () => {
     const expected = fs.readFileSync(expectedFixturePath, 'utf-8');
     expect(genDiff(firstConfigPath, secondConfigPath)).toBe(expected);
   });
+
+  it('ini diff', () => {
+    const expectedFixturePath = path.join(__dirname, '__fixtures__', 'jsondiff');
+    const firstConfigPath = path.join(__dirname, '__fixtures__', 'before.ini');
+    const secondConfigPath = path.join(__dirname, '__fixtures__', 'after.ini');
+    const expected = fs.readFileSync(expectedFixturePath, 'utf-8');
+    expect(genDiff(firstConfigPath, secondConfigPath)).toBe(expected);
+  });
 });
