@@ -12,3 +12,5 @@ npm install -g project2-snokke
 
 ## Asciinema 
 Step 1 - [Asciinema](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys?speed=4)
+
+Step 2 - [Asciinema](https://asciinema.org/a/xdCBX0mRrgU142HBiDqfzAos8?speed=4)
