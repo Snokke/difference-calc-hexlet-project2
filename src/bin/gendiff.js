@@ -5,7 +5,7 @@
  */
 
 import program from 'commander';
-import version from '../../package.json';
+import { version } from '../../package.json';
 import genDiff from '..';
 
 program
