@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import genDiff from '..';
+import genDiff from '../src';
 
 test('json diff', () => {
   const expectedFixturePath = path.join(__dirname, '__fixtures__', 'jsondiff');
