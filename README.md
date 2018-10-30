@@ -5,9 +5,21 @@
 [![Build Status](https://travis-ci.org/Snokke/project-lvl2-s357.svg?branch=master)](https://travis-ci.org/Snokke/project-lvl2-s357)
 
 ## Install
-
 ```sh
 npm install -g project2-snokke
+```
+
+#### Usage
+
+```
+Usage: gendiff [options] <firstConfig> <secondConfig>
+
+Compares two configuration files and shows a difference.
+
+Options:
+  -V, --version        output the version number
+  -f, --format [type]  output format
+  -h, --help           output usage information
 ```
 
 ## Asciinema 
