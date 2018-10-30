@@ -29,7 +29,6 @@ const genDiff = (pathToFile1, pathToFile2) => {
     return acc;
   }, '{');
 
-  // console.log(`${result}\n}`);
   return `${result}\n}`;
 };
 
