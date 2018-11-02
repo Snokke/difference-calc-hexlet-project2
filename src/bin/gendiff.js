@@ -15,5 +15,3 @@ program
   .option('-f, --format [type]', 'output format')
   .action((firstConf, secondConf) => console.log(genDiff(firstConf, secondConf, program.format)))
   .parse(process.argv);
-
-console.log(program.format);

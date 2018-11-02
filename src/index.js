@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import parse from './parsers';
 import parseToAST from './parseToAST';
-import { defaultRender, plainRender } from './renderers';
+import defaultRender from './renderers/defaultrender';
+import plainRender from './renderers/plainrender';
 
 const readFile = pathToFile => fs.readFileSync(pathToFile, 'utf-8');
 const getExtension = pathToFile => path.extname(pathToFile).substr(1);
@@ -19,14 +20,12 @@ const genDiff = (pathToFile1, pathToFile2, type) => {
 
   const diffAST = parseToAST(object1, object2);
 
-  console.log(`!!! Type: ${type}`);
-
   if (type === 'plain') {
-    return plainRender(diffAST, type);
+    return plainRender(diffAST);
   }
   return defaultRender(diffAST);
 };
 
-//genDiff('./__tests__/__fixtures__/tree/before.json', './__tests__/__fixtures__/tree/before.json', 'plain');
+// genDiff('./__tests__/__fixtures__/tree/before.json', './__tests__/__fixtures__/tree/before.json', 'plain');
 
 export default genDiff;

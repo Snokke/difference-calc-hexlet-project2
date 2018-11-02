@@ -1,5 +1,7 @@
+import _ from 'lodash';
+
 const valueToString = (value, depth) => {
-  if (!(value instanceof Object)) {
+  if (!(_.isObject(value))) {
     return value;
   }
   const result = Object.keys(value).map(key => `${'    '.repeat(depth + 2)}${key}: ${value[key]}`).join('\n');
@@ -29,8 +31,4 @@ const defaultRender = (ast) => {
   return iter(ast, 0);
 };
 
-const plainRender = (ast) => {
-  return 'Plain render';
-};
-
-export { defaultRender, plainRender };
+export default defaultRender;
