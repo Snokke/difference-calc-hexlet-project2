@@ -26,6 +26,4 @@ const genDiff = (pathToFile1, pathToFile2, type) => {
   return defaultRender(diffAST);
 };
 
-// genDiff('./__tests__/__fixtures__/tree/before.json', './__tests__/__fixtures__/tree/before.json', 'plain');
-
 export default genDiff;

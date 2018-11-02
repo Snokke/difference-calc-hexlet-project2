@@ -1,5 +1,6 @@
 const plainRender = (ast) => {
-  return '';
+  const result = ast;
+  return result;
 };
 
 export default plainRender;
