@@ -19,6 +19,8 @@ const genDiff = (pathToFile1, pathToFile2, type) => {
 
   const diffAST = parseToAST(object1, object2);
 
+  console.log(`!!! Type: ${type}`);
+
   if (type === 'plain') {
     return plainRender(diffAST, type);
   }
