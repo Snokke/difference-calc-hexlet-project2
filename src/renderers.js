@@ -13,7 +13,7 @@ const mappingState = {
   new: (item, depth) => `  + ${item.key}: ${valueToString(item.value, depth)}`,
 };
 
-const render = (ast) => {
+const defaultRender = (ast) => {
   const iter = (data, depth) => {
     const result = data.reduce((acc, item) => {
       if (item.children) {
@@ -29,4 +29,8 @@ const render = (ast) => {
   return iter(ast, 0);
 };
 
-export default render;
+const plainRender = (ast) => {
+  return 'Plain render';
+};
+
+export { defaultRender, plainRender };
