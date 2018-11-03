@@ -37,3 +37,5 @@ Step 3 - [Asciinema](https://asciinema.org/a/imAIf0UoPCxSovSOsjIaTwkJm?speed=4)
 Step 4 - [Asciinema](https://asciinema.org/a/tdBkRa415EgZLSi2ODoXuRx3q?speed=4)
 
 Step 5 - [Asciinema](https://asciinema.org/a/wGMDMUJGVqpTTeywxIXlpW7YM?speed=4)
+
+Step 6 - [Asciinema](https://asciinema.org/a/BOJAFXoE62rT1XoC0fIqazVuj?speed=4)
