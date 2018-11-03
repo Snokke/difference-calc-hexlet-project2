@@ -8,6 +8,4 @@ const mappingType = {
   json: jsonRender,
 };
 
-const render = (ast, type) => mappingType[type](ast);
-
-export default render;
+export default (ast, type) => mappingType[type](ast);
