@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import genDiff from '../src';
 
-/*
+
 describe('genDiff plain format, tree structure', () => {
   const expectedFixturePath = path.join(__dirname, '__fixtures__/tree', 'plainformatdiff');
   const expected = fs.readFileSync(expectedFixturePath, 'utf-8');
@@ -25,7 +25,7 @@ describe('genDiff plain format, tree structure', () => {
     expect(genDiff(firstConfigPath, secondConfigPath, 'plain')).toBe(expected);
   });
 });
-*/
+
 
 describe('genDiff tree', () => {
   const expectedFixturePath = path.join(__dirname, '__fixtures__/tree', 'jsondiff');
