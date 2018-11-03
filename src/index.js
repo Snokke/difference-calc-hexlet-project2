@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parse from './parsers';
 import parseToAST from './parseToAST';
-import render from './renderers';
+import render from './renderers/index';
 
 const readFile = pathToFile => fs.readFileSync(pathToFile, 'utf-8');
 const getExtension = pathToFile => path.extname(pathToFile).substr(1);
