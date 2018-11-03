@@ -1,6 +1,6 @@
 {
   "name": "project2-snokke",
-  "version": "0.2.14",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -51,7 +51,7 @@
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
     "eslint-plugin-babel": "^5.2.1",
-    "eslint-plugin-jest": "^21.26.2",
+    "eslint-plugin-jest": "^21.27.0",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "jest": "^23.6.0"
   }
