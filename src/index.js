@@ -3,7 +3,7 @@ import path from 'path';
 import parse from './parsers';
 import parseToAST from './parseToAST';
 import nestedRender from './renderers/nestedRender';
-import plainRender from './renderers/plainRender2';
+import plainRender from './renderers/plainRender';
 
 const readFile = pathToFile => fs.readFileSync(pathToFile, 'utf-8');
 const getExtension = pathToFile => path.extname(pathToFile).substr(1);
