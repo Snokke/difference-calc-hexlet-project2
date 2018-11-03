@@ -22,6 +22,4 @@ const genDiff = (pathToFile1, pathToFile2, type) => {
   return renderedDiff;
 };
 
-console.log(genDiff('./__tests__/__fixtures__/tree/before.json', './__tests__/__fixtures__/tree/after.json', 'json'));
-
 export default genDiff;
