@@ -6,6 +6,6 @@ const mappingType = {
   plain: plainRender,
 };
 
-const render = (ast, type = 'nested') => mappingType[type](ast);
+const render = (ast, type) => mappingType[type](ast);
 
 export default render;
