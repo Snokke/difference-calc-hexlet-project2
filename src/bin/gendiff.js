@@ -9,7 +9,12 @@ import { version } from '../../package.json';
 import genDiff from '..';
 
 const rightType = (type) => {
-  return type;
+  const types = ['nested', 'plain'];
+  if (types.includes(type)) {
+    return type;
+  }
+  console.log('Wrong type');
+  return 'nested';
 };
 
 program
