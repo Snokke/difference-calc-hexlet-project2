@@ -13,7 +13,7 @@ const parseToAST = (object1, object2) => {
       }
       return [...acc, {
         key: item,
-        state: 'changed',
+        state: 'modified',
         value: object1[item],
         newValue: object2[item],
       }];

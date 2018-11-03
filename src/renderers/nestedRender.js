@@ -9,13 +9,13 @@ const valueToString = (value, depth) => {
 };
 
 const mappingState = {
-  changed: (item, depth) => `  + ${item.key}: ${valueToString(item.newValue, depth)}\n${'    '.repeat(depth)}  - ${item.key}: ${valueToString(item.value, depth)}`,
+  modified: (item, depth) => `  + ${item.key}: ${valueToString(item.newValue, depth)}\n${'    '.repeat(depth)}  - ${item.key}: ${valueToString(item.value, depth)}`,
   unchanged: (item, depth) => `    ${item.key}: ${valueToString(item.value, depth)}`,
   deleted: (item, depth) => `  - ${item.key}: ${valueToString(item.value, depth)}`,
   new: (item, depth) => `  + ${item.key}: ${valueToString(item.value, depth)}`,
 };
 
-const defaultRender = (ast) => {
+const nestedRender = (ast) => {
   const iter = (data, depth) => {
     const result = data.reduce((acc, item) => {
       if (item.children) {
@@ -31,4 +31,4 @@ const defaultRender = (ast) => {
   return iter(ast, 0);
 };
 
-export default defaultRender;
+export default nestedRender;

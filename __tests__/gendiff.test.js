@@ -10,19 +10,19 @@ describe('genDiff plain format, tree structure', () => {
   it('json tree diff', () => {
     const firstConfigPath = path.join(__dirname, '__fixtures__/tree', 'before.json');
     const secondConfigPath = path.join(__dirname, '__fixtures__/tree', 'after.json');
-    expect(genDiff(firstConfigPath, secondConfigPath)).toBe(expected);
+    expect(genDiff(firstConfigPath, secondConfigPath, 'plain')).toBe(expected);
   });
 
   it('yaml tree diff', () => {
     const firstConfigPath = path.join(__dirname, '__fixtures__/tree', 'before.yaml');
     const secondConfigPath = path.join(__dirname, '__fixtures__/tree', 'after.yaml');
-    expect(genDiff(firstConfigPath, secondConfigPath)).toBe(expected);
+    expect(genDiff(firstConfigPath, secondConfigPath, 'plain')).toBe(expected);
   });
 
   it('ini tree diff', () => {
     const firstConfigPath = path.join(__dirname, '__fixtures__/tree', 'before.ini');
     const secondConfigPath = path.join(__dirname, '__fixtures__/tree', 'after.ini');
-    expect(genDiff(firstConfigPath, secondConfigPath)).toBe(expected);
+    expect(genDiff(firstConfigPath, secondConfigPath, 'plain')).toBe(expected);
   });
 });
 */
