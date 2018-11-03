@@ -9,26 +9,27 @@ const valueToString = (value, depth) => {
 };
 
 const mappingState = {
-  modified: (item, depth) => `  + ${item.key}: ${valueToString(item.newValue, depth)}\n${'    '.repeat(depth)}  - ${item.key}: ${valueToString(item.value, depth)}`,
-  unchanged: (item, depth) => `    ${item.key}: ${valueToString(item.value, depth)}`,
-  deleted: (item, depth) => `  - ${item.key}: ${valueToString(item.value, depth)}`,
-  new: (item, depth) => `  + ${item.key}: ${valueToString(item.value, depth)}`,
+  modified: (item, depth) => [`${'    '.repeat(depth)}  + ${item.key}: ${valueToString(item.newValue, depth)}`,
+    `${'    '.repeat(depth)}  - ${item.key}: ${valueToString(item.value, depth)}`],
+  unchanged: (item, depth) => `${'    '.repeat(depth)}    ${item.key}: ${valueToString(item.value, depth)}`,
+  deleted: (item, depth) => `${'    '.repeat(depth)}  - ${item.key}: ${valueToString(item.value, depth)}`,
+  new: (item, depth) => `${'    '.repeat(depth)}  + ${item.key}: ${valueToString(item.value, depth)}`,
 };
 
 const nestedRender = (ast) => {
   const iter = (data, depth) => {
-    const result = data.reduce((acc, item) => {
+    const renderedArray = data.map((item) => {
       if (item.children) {
         const newDepth = depth + 1;
-        return `${acc}\n${'    '.repeat(newDepth)}${item.key}: ${iter(item.children, newDepth)}`;
+        return [`${'    '.repeat(newDepth)}${item.key}: {`, iter(item.children, newDepth)];
       }
-      return `${acc}\n${'    '.repeat(depth)}${mappingState[item.state](item, depth)}`;
-    }, '');
+      return mappingState[item.state](item, depth);
+    });
 
-    return `{${result}\n${'    '.repeat(depth)}}`;
+    return [renderedArray, `${'    '.repeat(depth)}}`];
   };
-
-  return iter(ast, 0);
+  const result = ['{', iter(ast, 0)];
+  return _.flattenDeep(result).join('\n');
 };
 
 export default nestedRender;
