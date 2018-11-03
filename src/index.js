@@ -2,8 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parse from './parsers';
 import parseToAST from './parseToAST';
-import nestedRender from './renderers/nestedRender';
-import plainRender from './renderers/plainRender';
+import render from './renderers';
 
 const readFile = pathToFile => fs.readFileSync(pathToFile, 'utf-8');
 const getExtension = pathToFile => path.extname(pathToFile).substr(1);
@@ -19,11 +18,8 @@ const genDiff = (pathToFile1, pathToFile2, type) => {
   const object2 = parse(file2, extension2);
 
   const diffAST = parseToAST(object1, object2);
-
-  if (type === 'plain') {
-    return plainRender(diffAST);
-  }
-  return nestedRender(diffAST);
+  const renderedDiff = render(diffAST, type);
+  return renderedDiff;
 };
 
 export default genDiff;

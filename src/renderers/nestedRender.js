@@ -8,7 +8,8 @@ const valueToString = (value, depth) => {
   return `{\n${result}\n${'    '.repeat(depth + 1)}}`;
 };
 
-const mappingState = {
+const mappingType = {
+  children: (item, depth, iter) => [`${'    '.repeat(depth + 1)}${item.key}: {`, iter(item.children, depth + 1)],
   modified: (item, depth) => [`${'    '.repeat(depth)}  + ${item.key}: ${valueToString(item.newValue, depth)}`,
     `${'    '.repeat(depth)}  - ${item.key}: ${valueToString(item.value, depth)}`],
   unchanged: (item, depth) => `${'    '.repeat(depth)}    ${item.key}: ${valueToString(item.value, depth)}`,
@@ -18,14 +19,7 @@ const mappingState = {
 
 const nestedRender = (ast) => {
   const iter = (data, depth) => {
-    const renderedArray = data.map((item) => {
-      if (item.children) {
-        const newDepth = depth + 1;
-        return [`${'    '.repeat(newDepth)}${item.key}: {`, iter(item.children, newDepth)];
-      }
-      return mappingState[item.state](item, depth);
-    });
-
+    const renderedArray = data.map(item => mappingType[item.type](item, depth, iter));
     return [renderedArray, `${'    '.repeat(depth)}}`];
   };
   const result = ['{', iter(ast, 0)];
