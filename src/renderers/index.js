@@ -1,9 +1,9 @@
-import nestedRender from './nestedRender';
+import prettyRender from './prettyRender';
 import plainRender from './plainRender';
 import jsonRender from './jsonRender';
 
 const mappingType = {
-  nested: nestedRender,
+  pretty: prettyRender,
   plain: plainRender,
   json: jsonRender,
 };
