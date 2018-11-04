@@ -1,7 +1,7 @@
 # Вычислитель отличий (Hexlet Project 2)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/bd957831707117cffb09/maintainability)](https://codeclimate.com/github/Snokke/project-lvl1-s236/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/bd957831707117cffb09/test_coverage)](https://codeclimate.com/github/Snokke/project-lvl1-s236/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/818d268f01ce20e55648/maintainability)](https://codeclimate.com/github/Snokke/project-lvl2-s357/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/818d268f01ce20e55648/test_coverage)](https://codeclimate.com/github/Snokke/project-lvl2-s357/test_coverage)
 [![Build Status](https://travis-ci.org/Snokke/project-lvl2-s357.svg?branch=master)](https://travis-ci.org/Snokke/project-lvl2-s357)
 
 ## Install
