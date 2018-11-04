@@ -26,6 +26,11 @@
       "<rootDir>/node_modules/",
       "<rootDir>/.history/",
       "<rootDir>/dist/"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text-summary"
     ]
   },
   "author": "Andrei Babintsev",
