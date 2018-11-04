@@ -26,7 +26,7 @@ Supported file formats: **json**, **yaml**, **ini**
 
 Supported output formats: **pretty**, **flat**, **json**
 
-## Usage
+## Asciinema`s
 Step 1. Help - [Asciinema](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys?speed=4)
 
 Step 2. Diff between files with flat structure. Pretty output format - [Asciinema](https://asciinema.org/a/xdCBX0mRrgU142HBiDqfzAos8?speed=4)
