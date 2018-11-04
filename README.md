@@ -18,7 +18,7 @@ Compares two configuration files and shows a difference.
 
 Options:
   -V, --version        output the version number
-  -f, --format [type]  output format: nested, plain, json (default: "nested")
+  -f, --format [type]  output format: pretty, plain, json (default: "pretty")
   -h, --help           output usage information
 ```
 
