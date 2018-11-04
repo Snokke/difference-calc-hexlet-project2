@@ -18,26 +18,25 @@ Compares two configuration files and shows a difference.
 
 Options:
   -V, --version        output the version number
-  -f, --format [type]  output format
+  -f, --format [type]  output format: nested, plain, json (default: "nested")
   -h, --help           output usage information
 ```
 
-Supported file formats: 
-* json
-* yaml
-* ini
+Supported file formats: **json**, **yaml**, **ini**
 
-## Asciinema 
-Step 1 - [Asciinema](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys?speed=4)
+Supported output formats: **pretty**, **flat**, **json**
 
-Step 2 - [Asciinema](https://asciinema.org/a/xdCBX0mRrgU142HBiDqfzAos8?speed=4)
+## Usage
+Step 1. Help - [Asciinema](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys?speed=4)
 
-Step 3 - [Asciinema](https://asciinema.org/a/imAIf0UoPCxSovSOsjIaTwkJm?speed=4)
+Step 2. Diff between files with flat structure. Pretty output format - [Asciinema](https://asciinema.org/a/xdCBX0mRrgU142HBiDqfzAos8?speed=4)
 
-Step 4 - [Asciinema](https://asciinema.org/a/tdBkRa415EgZLSi2ODoXuRx3q?speed=4)
+Step 3. Diff between YAML format files - [Asciinema](https://asciinema.org/a/imAIf0UoPCxSovSOsjIaTwkJm?speed=4)
 
-Step 5 - [Asciinema](https://asciinema.org/a/wGMDMUJGVqpTTeywxIXlpW7YM?speed=4)
+Step 4. Diff between ini format files - [Asciinema](https://asciinema.org/a/tdBkRa415EgZLSi2ODoXuRx3q?speed=4)
 
-Step 6 - [Asciinema](https://asciinema.org/a/BOJAFXoE62rT1XoC0fIqazVuj?speed=4)
+Step 5. Diff between files with tree structure - [Asciinema](https://asciinema.org/a/wGMDMUJGVqpTTeywxIXlpW7YM?speed=4)
 
-Step 7 - [Asciinema](https://asciinema.org/a/OkpwfvZf2P4aE4kJHFyTc7pLM?speed=4)
+Step 6. Flat output format - [Asciinema](https://asciinema.org/a/BOJAFXoE62rT1XoC0fIqazVuj?speed=4)
+
+Step 7. JSON output format - [Asciinema](https://asciinema.org/a/OkpwfvZf2P4aE4kJHFyTc7pLM?speed=4)
