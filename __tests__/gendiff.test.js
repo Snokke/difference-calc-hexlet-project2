@@ -49,7 +49,7 @@ describe('genDiff plain format, tree structure', () => {
 });
 
 
-describe('genDiff tree', () => {
+describe('genDiff tree, pretty format', () => {
   const expectedFixturePath = path.join(__dirname, '__fixtures__/tree', 'prettydiff');
   const expected = fs.readFileSync(expectedFixturePath, 'utf-8');
 
@@ -73,7 +73,7 @@ describe('genDiff tree', () => {
 });
 
 
-describe('genDiff flat', () => {
+describe('genDiff flat, pretty format', () => {
   const expectedFixturePath = path.join(__dirname, '__fixtures__/flat', 'prettydiff');
   const expected = fs.readFileSync(expectedFixturePath, 'utf-8');
 
