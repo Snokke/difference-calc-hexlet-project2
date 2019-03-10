@@ -1,8 +1,8 @@
 # Difference calculator
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/818d268f01ce20e55648/maintainability)](https://codeclimate.com/github/Snokke/project-lvl2-s357/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/818d268f01ce20e55648/test_coverage)](https://codeclimate.com/github/Snokke/project-lvl2-s357/test_coverage)
-[![Build Status](https://travis-ci.org/Snokke/project-lvl2-s357.svg?branch=master)](https://travis-ci.org/Snokke/project-lvl2-s357)
+[![Maintainability](https://api.codeclimate.com/v1/badges/32c94c55e8b989767dac/maintainability)](https://codeclimate.com/github/Snokke/difference-calc-hexlet-project2/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/32c94c55e8b989767dac/test_coverage)](https://codeclimate.com/github/Snokke/difference-calc-hexlet-project2/test_coverage)
+[![Build Status](https://travis-ci.org/Snokke/difference-calc-hexlet-project2.svg?branch=master)](https://travis-ci.org/Snokke/difference-calc-hexlet-project2)
 
 ## Install
 ```sh
