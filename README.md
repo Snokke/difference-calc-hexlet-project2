@@ -1,4 +1,4 @@
-# Вычислитель отличий (Hexlet Project 2)
+# Difference calculator
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/818d268f01ce20e55648/maintainability)](https://codeclimate.com/github/Snokke/project-lvl2-s357/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/818d268f01ce20e55648/test_coverage)](https://codeclimate.com/github/Snokke/project-lvl2-s357/test_coverage)
