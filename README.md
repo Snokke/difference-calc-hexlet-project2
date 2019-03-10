@@ -9,7 +9,7 @@
 npm install -g project2-snokke
 ```
 
-#### Usage
+## Usage
 
 ```
 Usage: gendiff [options] <firstConfig> <secondConfig>
