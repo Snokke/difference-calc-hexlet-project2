@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Snokke/project-lvl2-s357.git"
+    "url": "git+https://github.com/Snokke/difference-calc-hexlet-project2.git"
   },
   "jest": {
     "testEnvironment": "node",
@@ -36,9 +36,9 @@
   "author": "Andrei Babintsev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Snokke/project-lvl2-s357/issues"
+    "url": "https://github.com/Snokke/difference-calc-hexlet-project2/issues"
   },
-  "homepage": "https://github.com/Snokke/project-lvl2-s357#readme",
+  "homepage": "https://github.com/Snokke/difference-calc-hexlet-project2#readme",
   "dependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
