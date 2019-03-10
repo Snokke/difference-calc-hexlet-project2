@@ -9,7 +9,7 @@
 npm install -g project2-snokke
 ```
 
-## Usage
+## Description
 
 ```
 Usage: gendiff [options] <firstConfig> <secondConfig>
@@ -26,17 +26,58 @@ Supported file formats: **json**, **yaml**, **ini**
 
 Supported output formats: **pretty**, **flat**, **json**
 
-## Asciinema`s
-Step 1. Help - [Asciinema](https://asciinema.org/a/GfXICQNQ08OIFZ4iDOteautys?speed=4)
+## Demo
 
-Step 2. Diff between files with flat structure. Pretty output format - [Asciinema](https://asciinema.org/a/xdCBX0mRrgU142HBiDqfzAos8?speed=4)
+Pretty format ([Asciinema](https://asciinema.org/a/wGMDMUJGVqpTTeywxIXlpW7YM?speed=4)):
+```
+bash-3.2$ gendiff before.json after.json     
+{                                                                                 
+    common: {                                                                     
+        setting1: Value 1                                                         
+      - setting2: 200                                                             
+      + setting3: {                                                               
+            key: value                                                            
+        }                                                                         
+      - setting3: true                                                            
+        setting6: {                                                               
+            key: value                                                            
+          + ops: vops                                                             
+        }                                                                         
+      + follow: false                                                             
+      + setting4: blah blah                                                       
+      + setting5: {                                                               
+            key5: value5                                                          
+        }                                                                         
+    }                                                                             
+    group1: {                                                                     
+      + baz: bars                                                                 
+      - baz: bas                                                                  
+        foo: bar                                                                  
+      + nest: str                                                                 
+      - nest: {                                                                   
+            key: value                                                            
+        }                                                                         
+    }                                                                             
+  - group2: {                                                                     
+        abc: 12345                                                                
+    }                                                                             
+  + group3: {                                                                     
+        fee: 100500                                                               
+    }                                                                             
+}  
+```
 
-Step 3. Diff between YAML format files - [Asciinema](https://asciinema.org/a/imAIf0UoPCxSovSOsjIaTwkJm?speed=4)
-
-Step 4. Diff between ini format files - [Asciinema](https://asciinema.org/a/tdBkRa415EgZLSi2ODoXuRx3q?speed=4)
-
-Step 5. Diff between files with tree structure - [Asciinema](https://asciinema.org/a/wGMDMUJGVqpTTeywxIXlpW7YM?speed=4)
-
-Step 6. Flat output format - [Asciinema](https://asciinema.org/a/BOJAFXoE62rT1XoC0fIqazVuj?speed=4)
-
-Step 7. JSON output format - [Asciinema](https://asciinema.org/a/OkpwfvZf2P4aE4kJHFyTc7pLM?speed=4)
+Flat format ([Asciinema](https://asciinema.org/a/BOJAFXoE62rT1XoC0fIqazVuj?speed=4)):
+```
+bash-3.2$ gendiff --format plain before.json after.json                           
+Property 'common.setting2' was removed                                            
+Property 'common.setting3' was updated. From true to [complex value]              
+Property 'common.setting6.ops' was added with value: 'vops'                       
+Property 'common.follow' was added with value: false                              
+Property 'common.setting4' was added with value: 'blah blah'                      
+Property 'common.setting5' was added with value: [complex value]                  
+Property 'group1.baz' was updated. From 'bas' to 'bars'                           
+Property 'group1.nest' was updated. From [complex value] to 'str'                 
+Property 'group2' was removed                                                     
+Property 'group3' was added with value: [complex value]              
+```
